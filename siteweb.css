@@ -1,0 +1,56 @@
+
+#lineaire-simple {
+background-image: url("https://fr.123rf.com/photo_191038717_des-paillettes-dor%C3%A9es-de-luxe-abstraites-scintillent-des-%C3%A9l%C3%A9ments-sur-fond-bleu-fonc%C3%A9-illustration-v.html?vti=lqnyu8ectlyafczd8l-1-20");
+}
+body
+{
+  background-image: url("https://img.freepik.com/vecteurs-libre/fond-superposition-neige-noel_1048-16894.jpg?w=740&t=st=1674414728~exp=1674415328~hmac=c09754ca236c365305c14f8e3e0cf81ef6deabfa30b352703917bc6da6ca6488");
+}
+div{
+  width: auto;
+  height: auto;
+  padding: 100px;
+}
+
+h1{
+  color:white;
+  text-align: center;
+  text-decoration: wavy;
+  font-style: italic;
+  font-size: 100px;
+  font-family: 'caramel';
+  margin-bottom: 1%;
+}
+
+
+ a{
+  color:white;
+  text-align: center;
+ font-size: larger;
+  font-weight: bolder;
+  padding-left: 600px;
+  display: flex;
+  padding-top: 100px;
+}
+#num{
+  display: flex;
+  align-items: center;
+  padding-left: 33%;
+}
+.logo hr{
+  text-align: center;
+  width: 40%;
+  height: 5px;
+  font: size 100px;
+  background-color: white;
+
+}
+#logo{
+ padding-bottom: 100%;
+}
+label{
+  color: white;
+  padding-left: 350px;
+  padding-top: 100px;
+}
+  

@@ -1,0 +1,633 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAISON ÖDASSE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caramel&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="bijoux.css">
+    <Link rel="icon" href="img/icon.png">
+<script>let navbar = document.querySelector('.navbar')
+
+    document.querySelector('#menu-bar').onclick = () =>{
+        navbar.classList.toggle('active');
+    }
+    
+    document.querySelector('#close').onclick = () =>{
+        navbar.classList.remove('active');
+    }
+    
+    window.onscroll = () =>{
+    
+        navbar.classList.remove('active');
+    
+        if(window.scrollY > 100){
+            document.querySelector('header').classList.add('active');
+        }else{
+            document.querySelector('header').classList.remove('active');
+        }
+    
+    }
+    
+    let themeToggler = document.querySelector('#theme-toggler');
+    
+    themeToggler.onclick = () =>{
+        themeToggler.classList.toggle('fa-sun');
+        if(themeToggler.classList.contains('fa-sun')){
+            document.querySelector('body').classList.add('active');
+        }else{
+            document.querySelector('body').classList.remove('active');
+        }
+    }
+    
+      document.querySelectorAll('.small-image-1').forEach(images =>{
+        images.onclick = () =>{
+            document.querySelector('.big-image-1').src = images.getAttribute('src');
+        }
+    });
+    
+    document.querySelectorAll('.small-image-2').forEach(images =>{
+        images.onclick = () =>{
+            document.querySelector('.big-image-2').src = images.getAttribute('src');
+        }
+    });
+    
+    document.querySelectorAll('.small-image-3').forEach(images =>{
+        images.onclick = () =>{
+            document.querySelector('.big-image-3').src = images.getAttribute('src');
+        }
+    });
+    
+    let countDate = new Date('aug 1, 2021 00:00:00').getTime();
+    
+    function countDown(){
+    
+        let now = new Date().getTime();
+        gap = countDate - now;
+    
+        let seconds = 1000;
+        let minutes = seconds * 60;
+        let hours = minutes * 60;
+        let days = hours * 24;
+    
+        let d = Math.floor(gap / (days));
+        let h = Math.floor((gap % (days)) / (hours));
+        let m = Math.floor((gap % (hours)) / (minutes));
+        let s = Math.floor((gap % (minutes)) / (seconds));
+    
+        document.getElementById('days').innerText = d;
+        document.getElementById('hours').innerText = h;
+        document.getElementById('minutes').innerText = m;
+        document.getElementById('seconds').innerText = s;
+    
+    }
+    
+    setInterval(function(){
+        countDown()
+    },1000);
+    
+    var swiper = new Swiper(".product-slider", {
+        slidesPerView: 3,
+        loop:true,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            550: {
+              slidesPerView: 2,
+            },
+            800: {
+              slidesPerView: 3,
+            },
+            1000: {
+                slidesPerView: 3,
+            },
+        },
+    });
+    
+    var swiper = new Swiper(".review-slider", {
+        slidesPerView: 3,
+        loop:true,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            550: {
+              slidesPerView: 2,
+            },
+            800: {
+              slidesPerView: 3,
+            },
+            1000: {
+                slidesPerView: 3,  },
+            },
+        });</script>
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="#" class="logo">MAISON ÖDASSE <span>.</span></a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#products">products</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="panier.html" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home" >
+
+    <div class="content">
+        <h3>MAISON ÖDASSE</h3>
+        <span> Un Savoir Faire Unique Et Precieux..</span>
+        
+        <a href="#product" class="btn">shop now</a>
+    </div>
+    
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span> about </span> us </h1>
+
+    <div class="row">
+
+        <div class="video-container">
+            <video src="pexels-whiterecord-8971888.mp4" loop autoplay muted></video>
+            <h3>luxury</h3>
+        </div>
+
+        <div class="content">
+            <h3>why choose us?</h3>
+            <p>Nous sommes une maison de joaillerie. Située à Paris, nous sommes spécialisés dans la Confection de bijoux de luxe uniquement. Notre maison a vu le jour au début des années 2000, nos pièces sont uniquement produites à la demande de nos chers clients. Notre maison utilise des matières premières nobles comme l’or , Musgravite, saphir, Jadiète, l’Alexandre.
+                nous sommes toujours à l’écoute des envies de nos clients, pour réaliser les pièces les plus rares et les plus magiques du monde de Joaillerie</p>
+            <a href="#" class="btn">learn more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <img src="images/icon-1.png" alt="">
+        <div class="info">
+            <h3>free delivery</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-2.png" alt="">
+        <div class="info">
+            <h3>10 days returns</h3>
+            <span>moneyback guarantee</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-3.png" alt="">
+        <div class="info">
+            <h3>offer & gifts</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-4.png" alt="">
+        <div class="info">
+            <h3>secure paymens</h3>
+            <span>protected by paypal</span>
+        </div>
+    </div>
+   
+</section>
+
+<!-- icons section ends -->
+
+<!-- prodcuts section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> latest <span>products</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model1.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Shirley"</h3>
+                <div class="price"> 600000$<span></span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model2.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Lyanna pear</h3>
+                <div class="price"> 2500000$<span></span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model3.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Tiffany</h3>
+                <div class="price"> 1050000$ <span></span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model4.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Aurora ring</h3>
+                <div class="price"> 1000000$<span></span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model5.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>paradise ring</h3>
+                <div class="price"> 1500000$<span></span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model6.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Gabriela</h3>
+                <div class="price"> 14000000$<span></span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model7.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Sautoir</h3>
+                <div class="price"> 6000000$ <span></span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model8.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Kayla</h3>
+                <div class="price"> 1120000$<span></span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model9.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Crystal blanc</h3>
+                <div class="price"> 11100000$<span></span> </div>
+            </div>
+        </div>
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model10.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>the rare perle</h3>
+                <div class="price"> 1700000$<span></span> </div>
+            </div>
+        </div>
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model11.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>spell on you</h3>
+                <div class="price"> 700000$ <span></span> </div>
+            </div>
+        </div>
+        <div class="box">
+            <span class="discount">-</span>
+            <div class="image">
+                <img src="img/model12.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Zellie</h3>
+                <div class="price"> 170000$ <span></span> </div>
+            </div>
+        </div>
+        <div class="box">
+            <span class="discount"></span>
+            <div class="image">
+                <img src="img/model13.jpeg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="panier.html" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Lorena</h3>
+                <div class="price"> 200000$<span></span> </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- prodcuts section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+<h1 class="heading"> customer's <span>review</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+            <img src="https://cdn.dribbble.com/users/1786581/screenshots/14885511/media/296f9539150df99e466035e45fa6b734.jpg?compress=1&resize=768x576&vertical=top" alt="">
+            <div class="user-info">
+                <h3>john deo</h3>
+                <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+            <img src="images/pic-2.png" alt="">
+            <div class="user-info">
+                <h3>john deo</h3>
+                <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+            <img src="images/pic-3.png" alt="">
+            <div class="user-info">
+                <h3>john deo</h3>
+                <span>happy customer</span>
+            </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+    </div>
+
+</div>
+    
+</section>
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span> contact </span> us </h1>
+
+    <div class="row">
+
+        <form action="">
+            <input type="text" placeholder="name" class="box">
+            <input type="email" placeholder="email" class="box">
+            <input type="number" placeholder="number" class="box">
+            <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
+
+        <div class="image">
+            <img src="img/comment.png" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">products</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorite</a>
+        </div>
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">algeria</a>
+            <a href="#">uk</a>
+            <a href="#">espagne</a>
+            <a href="#">france</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+213-456-7890</a>
+            <a href="#">example@gmail.com</a>
+            <a href="#">algeria,algiers</a>
+            <img src="images/payment.png" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

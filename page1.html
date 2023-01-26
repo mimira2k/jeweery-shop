@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myCV</title>
+    <link rel="stylesheet" href="siteweb.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caramel&display=swap" rel="stylesheet">
+    <script>
+  function check(pssw){
+     document.getElementById(pssw).verif(pssw).value="";
+     alert("you should enter your code");
+     document.getElementById(pssw).value.focus()
+     return false;
+}
+
+    </script>
+</head>
+<body >
+   <div id="lineaire-simple">
+        <div class="logo"  >
+         <h1 >MAISON ÖDASSE</h1>
+           <hr>
+     
+        
+         </div>
+         <label for="">Code De Confidentialité:</label><input type="password" name="" id="pssw" maxlength="5" onblur="verif()">
+     
+         <a href="bijoux.html" ondblclick="check()">check</a>
+     </div>
+  
+
+  
+
+</body>
+</html>
